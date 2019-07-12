@@ -11,8 +11,7 @@ export class AppComponent {
   public current;
   public min;
   public max;
-  public humity;
-  public cities;
+  public humidity;
 
   title = 'previsao-hoje';
 
@@ -24,7 +23,7 @@ export class AppComponent {
     this.WeatherApi.getWeather().subscribe(data => {
       this.min = data[`list`][0][`main`][`temp_min`];
       this.max = data[`list`][0][`main`][`temp_max`];
-      this.humity = data[`list`][0][`main`][`humidity`];
+      this.humidity = data[`list`][0][`main`][`humidity`];
       this.current = data[`list`][0][`main`][`temp`];
       },
         error => console.log(error));
