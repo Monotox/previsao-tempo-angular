@@ -6,6 +6,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class WeatherApiService {
+  //todo move to environment
   private APPID = 'c78b7f5d1ad4ccdbf90904161e675fbf';
 
   constructor(private httpClient: HttpClient) { }
